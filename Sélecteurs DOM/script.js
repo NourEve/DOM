@@ -24,6 +24,26 @@ for (let elem of parag){
     }
 }
 
+//partie 4 - couleurs alétoires au paragraphe
+function random_pg_color() {
+    var x = Math.floor(Math.random() * 255);
+    var y = Math.floor(Math.random() * 255);
+    var z = Math.floor(Math.random() * 255);
+    var pgColor = "rgb(" + x + "," + y + "," + z + ")";
+    return pgColor;
+}
+let parColor = document.querySelectorAll('p');
+for (let elem of parColor){
+    if (elem.classList.contains(elem.className)){
+        elem.style.color = "black";
+    }
+    else {
+        elem.style.color = random_pg_color();   
+    }
+}
+
+
+
 
 
 
