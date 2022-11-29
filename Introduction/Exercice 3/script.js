@@ -13,3 +13,9 @@ console.log(bgColor);
 document.body.style.background = bgColor;
 }
 random_bg_color();
+
+const myElement = document.body;
+    for( const child of myElement.children) {
+        console.log(document.getElementsByTagName("body")[0]);
+        console.log(child.tagName);
+    }
