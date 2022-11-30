@@ -8,4 +8,4 @@
 ## Contenu du repository:
 * Partie 1 - Introduction ;
 * partie 2 - Selectors ;
-* partie 3 - Create ;
+* partie 3 - Create.
