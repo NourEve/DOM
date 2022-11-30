@@ -1,0 +1,36 @@
+/*
+*/
+//tableau des apprenants :
+let inputAr = ["Arno Volts" ,"Aurélien Mariaule" ,"Aurore Lemaire" ,"Benjamin Porsont" ,"Céline Verreydt" ,"Corentin Miserque" ,"Dominique Coppée" ,"Edouard de Romrée de Vichenet" ,"Hugo Goorickx ","Jofrey Houyoux" ,"Jonathan Manes" ,"Jonathan bajoux" ,"Laura Wilhelmi" ,"Lysie Soyez" ,"Marnie Benalia" ,"Mathilde Cornelis" ,"Milo Bonnet" ,"Nadim El Nakadi" ,"Nathalie Vanden Abeele" ,"Nathalie Goffette" ,"Nour Everaert" ,"Pierre Mauriello" ,"Quentin Bource ","Virginie Dourson"];
+
+//fonction sortant les apprenants de manière aléatoire :
+function pickLearner(x) {
+    return Math.floor(Math.random() * x);
+}
+
+function random_bg_color() {
+    var x = Math.floor(Math.random() * 255);
+    var y = Math.floor(Math.random() * 255);
+    var z = Math.floor(Math.random() * 255);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    return bgColor;
+}
+//prendre article
+let tagArticle = document.getElementsByTagName("article")[0];
+//création des variables
+let newParag, newTxt, elem, all = 0;
+//prise du nombre d'apprenants
+let randStart = pickLearner(inputAr.length);
+console.log(randStart);
+//boucle while pour prendre les apprenants et les mélanger et les replacer dans des paragraphes
+while (all++ < inputAr.length) {
+    elem = inputAr[randStart];
+    newParag = document.createElement('p');
+    newTxt = document.createTextNode(elem);
+    newParag.appendChild(newTxt);
+    newParag.style.backgroundColor = random_bg_color();
+    tagArticle.appendChild(newParag);
+    if (++randStart == inputAr.length) {
+        randStart = 0;
+    }
+}
