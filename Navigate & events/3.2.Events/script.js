@@ -22,6 +22,7 @@ function greenCube (){
   let displayWrapper = document.querySelector('section');
   displayWrapper.appendChild(display);
   addLi("green square");
+  alert("green");
 }
 let greenColor = document.querySelector('.green');
 greenColor.addEventListener('click', greenCube);
@@ -34,6 +35,7 @@ function violetCube (){
   let displayWrapper = document.querySelector('section');
   displayWrapper.appendChild(display);
   addLi("violet square");
+  alert("violet");
 }
 let violetColor = document.querySelector('.violet');
 violetColor.addEventListener('click', violetCube);
@@ -46,6 +48,7 @@ function orangeCube (){
   let displayWrapper = document.querySelector('section');
   displayWrapper.appendChild(display);
   addLi("orange square");
+  alert("orange");
 }
 let orangeColor = document.querySelector('.orange');
 orangeColor.addEventListener('click', orangeCube);
