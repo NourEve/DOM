@@ -21,7 +21,7 @@ function greenCube (){
   display.classList.add("green");
   let displayWrapper = document.querySelector('section');
   displayWrapper.appendChild(display);
-  addLi("green");
+  addLi("green square");
 }
 let greenColor = document.querySelector('.green');
 greenColor.addEventListener('click', greenCube);
@@ -33,7 +33,7 @@ function violetCube (){
   display.classList.add("violet");
   let displayWrapper = document.querySelector('section');
   displayWrapper.appendChild(display);
-  addLi("violet");
+  addLi("violet square");
 }
 let violetColor = document.querySelector('.violet');
 violetColor.addEventListener('click', violetCube);
@@ -45,7 +45,7 @@ function orangeCube (){
   display.classList.add("orange");
   let displayWrapper = document.querySelector('section');
   displayWrapper.appendChild(display);
-  addLi("orange");
+  addLi("orange square");
 }
 let orangeColor = document.querySelector('.orange');
 orangeColor.addEventListener('click', orangeCube);
@@ -55,7 +55,7 @@ function addLi (color) {
   let ulCube = document.querySelector('ul');
   let liCube = document.createElement('li');
   ulCube.appendChild(liCube);
-  let txtCube = document.createTextNode ("[" + getElapsedTime()+ "] " + "Create a new " + color + " square");
+  let txtCube = document.createTextNode ("[" + getElapsedTime()+ "] " + "Create a new " + color);
   liCube.appendChild(txtCube);
 }
 
@@ -71,8 +71,21 @@ document.body.style.background = bgColor;
 document.body.onkeyup = function(e) {
   if(e.keyCode == 32) {
     random_bg_color();
+    addLi("background");
+  }
+  //effacer le journal si i enfoncée
+  else if(e.keyCode ==73) {
+    while(document.querySelectorAll('li').length) {
+      document.querySelector('li').remove();
+    }
+  }
+  else if(e.keyCode ==83) {
+    while(document.querySelectorAll('.displayedsquare').length) {
+      document.querySelector('.displayedsquare').remove();
+    }
   }
 }
+
 
 
 
