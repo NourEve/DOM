@@ -46,3 +46,17 @@ function redConfirm(){
         pwdConfirm.style.backgroundColor = "red";
     }
 }
+
+//mode sombre
+let darkSelect = document.getElementById("toggle-darkmode");
+darkSelect.addEventListener("change", darkMode);
+function darkMode(){
+    if (darkSelect.classList.toggle('darkmode')){
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+    }
+    else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+    }
+}
