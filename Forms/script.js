@@ -23,4 +23,26 @@ function hiddenTruth () {
 }
 
 //mettre le champ en rouge si moins de 6 caractères
-
+let pwd = document.getElementById("pwd");
+let pwdConfirm = document.getElementById("pwd-confirm");
+pwd.addEventListener("keyup", redChamp);
+function redChamp() {
+    let x = pwd.value.length;
+    if (x < 6) {
+        pwd.style.backgroundColor = "red";
+    }
+    else {
+        pwd.style.backgroundColor = "white";
+    }
+}
+pwdConfirm.addEventListener("keyup", redConfirm);
+function redConfirm(){
+    let a = pwd.value;
+    let b = pwdConfirm.value;
+    if (a == b) {
+        pwdConfirm.style.backgroundColor = "white";
+    }
+    else {
+        pwdConfirm.style.backgroundColor = "red";
+    }
+}
