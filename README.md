@@ -1,8 +1,8 @@
 # DOM
 **Découverte et entrainement à l'utilisation du DOM avec JavaScript :**   
 * par Nour Everaert ;
-* en 3 journées de travail ;
-* en date du 29 et 30 novembre 2022, et du 5 décembre 2022 ;
+* en 4 journées de travail ;
+* en date du 29 et 30 novembre 2022, du 5 et 9 décembre 2022 ;
 * dans le cadre de la formation BeCode.
 
 ## Contenu du repository :
@@ -15,4 +15,5 @@
 * point 3 :
   * partie 1 - navigate the DOM ;
   * partie 2 - events.
+* point 5 - forms.
 
